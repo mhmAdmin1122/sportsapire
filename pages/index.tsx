@@ -2,7 +2,6 @@ import Head from "next/head";
 import Layout from "./Components/L/Layout";
 import Herobanner from "./Components/H/Herobanner";
 import ChannelList from "./Components/C/ChannelList";
-import BreadCrumbs from "./Components/B/BreadCrumbs";
 
 export default function Home() {
   return (
@@ -14,7 +13,7 @@ export default function Home() {
       <Layout>
         <Herobanner />
         <div className='px-12 py-12'>
-          <BreadCrumbs bredName="Live Channel" LinkTxt="See ALL" url="/SubPages/live" />
+          
           <ChannelList />
         </div>
       </Layout>
