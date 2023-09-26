@@ -15,7 +15,7 @@ const NavBar = () => {
             <ul className="flex flex-wrap items-center gap-12 text-xl font-bold">
                 <Link href={"/"}><li className=''>Home</li></Link>
                 <Link href={"/SubPages/live"}><li className=''>Live</li></Link>
-                <Link href={"/"}><li className=''>Shop</li></Link>
+                <Link href={"/SubPages/shop"}><li className=''>Shop</li></Link>
                 <Link href={"/"}><li className=''>Schedule</li></Link>
                 <Link href={"/"}><li className=''>Help</li></Link>
             </ul>
