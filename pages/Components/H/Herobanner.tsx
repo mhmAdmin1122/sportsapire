@@ -17,7 +17,7 @@ const Herobanner = () => {
 
                 <h1 className='text-4xl font-bold text-[#fff] cursor-context-menu'>Watch Your Favourite <br /> Sport FREE & LIVE!</h1>
 
-                <Link href={"/"} className='cursor-context-menu'>
+                <Link href={"/SubPages/live"} className='cursor-context-menu'>
                     <button className='bg-[#151244] px-6 py-3 text-xl font-bold rounded-lg text-[#fff]'>Watch Live Now!</button>
                 </Link>
             </div>

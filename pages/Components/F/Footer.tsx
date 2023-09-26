@@ -6,7 +6,7 @@ import Link from 'next/link'
 
 const Footer = () => {
     return (
-        <footer className='flex flex-wrap items-center justify-between px-12 py-4 bg-[#151244] text-[#fff] font-bold'>
+        <footer className='flex flex-wrap items-center justify-between w-full h-[90px] px-12 py-4 bg-[#151244] text-[#fff] font-bold'>
             <div className="flex flex-wrap items-center gap-2">
                 <b><GiCommercialAirplane /></b>
                 <address className='cursor-context-menu'>Lodhran, Punjab, Pakistan</address>
