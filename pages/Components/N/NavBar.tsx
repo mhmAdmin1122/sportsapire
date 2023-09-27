@@ -16,8 +16,8 @@ const NavBar = () => {
                 <Link href={"/"}><li className=''>Home</li></Link>
                 <Link href={"/SubPages/live"}><li className=''>Live</li></Link>
                 <Link href={"/SubPages/shop"}><li className=''>Shop</li></Link>
-                <Link href={"/"}><li className=''>Schedule</li></Link>
-                <Link href={"/"}><li className=''>Help</li></Link>
+                <Link href={"/SubPages/schedule"}><li className=''>Schedule</li></Link>
+                <Link href={"/SubPages/help"}><li className=''>Help</li></Link>
             </ul>
 
             <div className="sign_in_out border-2 border-[#ff59bf] p-[2px] rounded-full">
