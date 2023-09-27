@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+form input, form textarea {
+    @apply px-4 py-2 rounded-md outline-none border-2 border-gray-200 shadow-md shadow-gray-200 w-[320px];
+}
+form label{
+    @apply text-xl font-bold  text-[#fff];
+}
+form button{
+    @apply bg-green-500 px-6 py-2 rounded-md;
+}
