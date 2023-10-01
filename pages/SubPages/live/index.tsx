@@ -9,9 +9,17 @@ import asport from '@/public/img/asport.jpeg'
 import supsport from '@/public/img/supsport.jpeg'
 import sonysport3 from '@/public/img/sonysport3.jpeg'
 import Head from 'next/head'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import axios from 'axios'
 
-const index = () => {
+const Live = () => {
+    const [channelCardData, setChannelCardData] = useState<string | Boolean | Number | null | never | object | any>([]);
+    const keyRotation: string = channelCardData?._id;
+    useEffect(() => {
+        axios.get('/api/channel').then(res => {
+            setChannelCardData(res.data)
+        })
+    }, []);
     return (
         <>
             <Head>
@@ -22,14 +30,9 @@ const index = () => {
                 <div className='px-12 py-12'>
                     <h1 className='text-4xl font-bold text-center'>Live Channels</h1>
                     <div className="flex flex-wrap items-center justify-center gap-8 px-4 py-12">
-                        <Card ChannelName="PTV SPORT" ChannelCategory="Cricket, FootBall, Volyball, Tennis, etc.." ChannelOwner="Pakistan" SRC={ptv} />
-                        <Card ChannelName="SKY SPORT" ChannelCategory="Cricket, FootBall, Volyball, Tennis, etc.." ChannelOwner="United Kingdom" SRC={sky} />
-                        <Card ChannelName="WILLOW HD" ChannelCategory="Cricket, FootBall, Volyball, Tennis, etc.." ChannelOwner="India" SRC={willo} />
-                        <Card ChannelName="STAR SPORT 1" ChannelCategory="Cricket, FootBall, Volyball, Tennis, etc.." ChannelOwner="India" SRC={starsport1} />
-                        <Card ChannelName="A-Sport HD" ChannelCategory="Cricket, FootBall, Volyball, Tennis, etc.." ChannelOwner="Pakistan" SRC={asport} />
-                        <Card ChannelName="Super Sport" ChannelCategory="Cricket, FootBall, Volyball, Tennis, etc.." ChannelOwner="South African" SRC={supsport} />
-                        <Card ChannelName="Geo Super" ChannelCategory="Cricket, FootBall, Volyball, Tennis, etc.." ChannelOwner="Pakistan" SRC={geosuper} />
-                        <Card ChannelName="Sony Ten 3 HD" ChannelCategory="Cricket, FootBall, Volyball, Tennis, etc.." ChannelOwner="India" SRC={sonysport3} />
+                        {channelCardData.map((channelCardData: string) => (
+                            <Card data={channelCardData} key={keyRotation + 1}/>
+                        ))}
                     </div>
                 </div>
             </Layout>
@@ -37,4 +40,4 @@ const index = () => {
     )
 }
 
-export default index
+export default Live;
