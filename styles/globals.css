@@ -11,3 +11,48 @@ form label{
 form button{
     @apply bg-green-500 px-6 py-2 rounded-md;
 }
+/* admin css */
+.navbar,
+.loginInfo {
+  box-shadow: 10px 12px 12px #cfc8c8, inset 12px 12px 25px #d6d3d3;
+}
+
+.comment_readbox {
+  border: 2px solid #bebebe63;
+  box-shadow: 10px 14px 12px #cfc8c8, inset 8px 8px 32px #d6d3d3;
+}
+
+.admin-tabslist::-webkit-scrollbar,
+.navbar::-webkit-scrollbar,
+.main-body-area::-webkit-scrollbar {
+  width: 0px;
+}
+
+.logOutico:hover {
+  background: #ff0000;
+}
+.logOutico:hover,
+.subnav_ico:hover {
+  box-shadow: -4px 4px 10px #c26a6a, 4px -4px 10px #22868d,
+    -4px -4px 10px #7770b6, 4px 4px 10px #b067b3, inset 12px 12px 25px #dfb0b0;
+}
+
+.main-body-area {
+  width: calc(100% - 330px);
+}
+.navbar_tabs a {
+  transition: all 0.5s ease-in-out;
+}
+.navbar_tabs a:hover {
+  @apply text-blue-500;
+}
+.navbar_tabs b svg:hover {
+  @apply text-red-600;
+}
+.article-form input, .product_postDetail input, .shop_cardDetail input, .cardDetail_Channel input,
+textarea {
+  @apply w-[360px] px-4 py-3 outline-none border-2 border-gray-200 rounded-lg bg-[#fff] shadow-md shadow-gray-300;
+}
+.article-form label, .product_postDetail label, .shop_cardDetail label, .cardDetail_Channel label{
+  @apply text-lg font-bold py-3 text-[#fff];
+}

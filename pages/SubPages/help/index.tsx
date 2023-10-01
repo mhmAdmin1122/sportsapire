@@ -99,6 +99,7 @@ const Help = () => {
 
                         </form>
                     </div>}
+                    
                     {problems && <div className="absolute grid justify-center z-20 bg-[#1f1e1ed5] px-20 py-9 w-full h-screen">
                         <div className='absolute right-0'>
                             <button className='text-[#fff] bg-red-600 px-4 py-2 rounded-md text-xl font-bold flex items-center justify-center' onClick={closeBtnHandle}>X</button>
@@ -115,6 +116,7 @@ const Help = () => {
 
                         </form>
                     </div>}
+
                     {mapDirection && <div className="absolute grid justify-center z-20 bg-[#1f1e1ed5] px-20 py-9 w-full h-screen">
                         <div className='absolute right-0'>
                             <button className='text-[#fff] bg-red-600 px-4 py-2 rounded-md text-xl font-bold flex items-center justify-center' onClick={closeBtnHandle}>X</button>
@@ -127,6 +129,7 @@ const Help = () => {
 
                         </form>
                     </div>}
+
                     {feedback && <div className="absolute grid justify-center z-20 bg-[#1f1e1ed5] px-20 py-9 w-full h-screen">
                         <div className='absolute right-0'>
                             <button className='text-[#fff] bg-red-600 px-4 py-2 rounded-md text-xl font-bold flex items-center justify-center' onClick={closeBtnHandle}>X</button>
