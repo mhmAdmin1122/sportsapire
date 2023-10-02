@@ -3,6 +3,7 @@ import ImageBox from '../I/ImageBox'
 import hero from '@/public/img/hero.png'
 import { FaUsers } from 'react-icons/fa'
 import Link from 'next/link'
+import Image from 'next/image'
 
 const Herobanner = () => {
     return (
@@ -23,7 +24,7 @@ const Herobanner = () => {
             </div>
 
             <div className="w-[50%] h-[auto]">
-                <ImageBox SRC={hero} ALT="hero-PIC" />
+                <Image src={hero} alt="hero-PIC" />
             </div>
 
         </section>
