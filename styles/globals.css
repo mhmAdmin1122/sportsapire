@@ -56,3 +56,9 @@ textarea {
 .article-form label, .product_postDetail label, .shop_cardDetail label, .cardDetail_Channel label{
   @apply text-lg font-bold py-3 text-[#fff];
 }
+
+.herobox{
+  background-image: url('/img/herobackimg.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}

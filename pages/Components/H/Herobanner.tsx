@@ -7,7 +7,7 @@ import Image from 'next/image'
 
 const Herobanner = () => {
     return (
-        <section className='flex flex-wrap justify-around items-center bg-gradient-to-r from-[#ff59bf] via-[#b96f9d] to-[#dab0ca] px-12 pt-12 pb-0'>
+        <section className='herobox flex flex-wrap justify-around items-center px-12 pt-12 pb-0'>
 
             <div className='grid justify-items-left gap-5 w-[50%]'>
 
