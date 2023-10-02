@@ -18,7 +18,7 @@ const Footer = () => {
             <div className="flex flex-wrap items-center gap-4">
                 <Link href={''} target='_blank'><b className='text-2xl hover:text-[#87ceeb]'><FaFacebook /></b></Link>
                 <Link href={''} target='_blank'><b className='text-2xl hover:text-[#ff0000]'><FaYoutube /></b></Link>
-                <Link href={''} target='_blank'><b className='text-2xl hover:text-[#e75d74]'><FaInstagramSquare /></b></Link>
+                <Link href={'https://instagram.com/sport_sapire?igshid=OGQ5ZDc2ODk2ZA=='} target='_blank'><b className='text-2xl hover:text-[#e75d74]'><FaInstagramSquare /></b></Link>
             </div>
         </footer>
     )
