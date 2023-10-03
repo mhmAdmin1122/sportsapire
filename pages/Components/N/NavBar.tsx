@@ -2,17 +2,18 @@ import React from 'react'
 import logo from '@/public/img/LOGO.png'
 import Link from 'next/link'
 import ImageBox from '../I/ImageBox'
+import { MdOutlineMenuBook } from 'react-icons/md'
 
 const NavBar = () => {
     return (
-        <nav className='flex flex-wrap items-center justify-between px-10 bg-[#0f0d31] h-[80px] text-[#fff] w-full'>
+        <nav className='navbar_site_box flex flex-wrap items-center justify-between px-10 bg-[#0f0d31] h-[80px] text-[#fff] w-full'>
 
             {/* Logo */}
-            <Link href={"/"} className="w-[120px] h-[80px]">
-                <ImageBox SRC={logo} ALT="logo"/>
+            <Link href={"/"} className="w-[120px] h-[80px] logo_pic">
+                <ImageBox SRC={logo} ALT="logo" />
             </Link>
 
-            <ul className="flex flex-wrap items-center gap-12 text-xl font-bold">
+            <ul className="siteNavbar_tabs flex flex-wrap items-center gap-12 text-xl font-bold">
                 <Link href={"/"}><li className=''>Home</li></Link>
                 <Link href={"/SubPages/live"}><li className=''>Live</li></Link>
                 <Link href={"/SubPages/shop"}><li className=''>Shop</li></Link>
@@ -20,9 +21,7 @@ const NavBar = () => {
                 <Link href={"/SubPages/help"}><li className=''>Help</li></Link>
             </ul>
 
-            <div className="sign_in_out border-2 border-[#ff59bf] p-[2px] rounded-full">
-                <button className='SignIn bg-[#ff59bf] text-[#fff] px-5 py-2 rounded-full text-lg font-semibold'>Sign In</button>
-            </div>
+            <button className='menuIcon_MobileView_Tabs text-2xl font-bold'><MdOutlineMenuBook /></button>
 
         </nav>
     )

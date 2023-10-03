@@ -2,14 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-form input, form textarea {
-    @apply px-4 py-2 rounded-md outline-none border-2 border-gray-200 shadow-md shadow-gray-200 w-[320px];
+form input,
+form textarea {
+  @apply px-4 py-2 rounded-md outline-none border-2 border-gray-200 shadow-md shadow-gray-200 w-[320px];
 }
-form label{
-    @apply text-xl font-bold  text-[#fff];
+form label {
+  @apply text-xl font-bold  text-[#fff];
 }
-form button{
-    @apply bg-green-500 px-6 py-2 rounded-md;
+form button {
+  @apply bg-green-500 px-6 py-2 rounded-md;
 }
 /* admin css */
 .navbar,
@@ -49,16 +50,212 @@ form button{
 .navbar_tabs b svg:hover {
   @apply text-red-600;
 }
-.article-form input, .product_postDetail input, .shop_cardDetail input, .cardDetail_Channel input,
+.article-form input,
+.product_postDetail input,
+.shop_cardDetail input,
+.cardDetail_Channel input,
 textarea {
   @apply w-[360px] px-4 py-3 outline-none border-2 border-gray-200 rounded-lg bg-[#fff] shadow-md shadow-gray-300;
 }
-.article-form label, .product_postDetail label, .shop_cardDetail label, .cardDetail_Channel label{
+.article-form label,
+.product_postDetail label,
+.shop_cardDetail label,
+.cardDetail_Channel label {
   @apply text-lg font-bold py-3 text-[#fff];
 }
 
-.herobox{
-  background-image: url('/img/herobackimg.jpeg');
+.herobox {
+  background-image: url("/img/herobackimg.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
+}
+.mobile-vieew_tabView,
+.menuIcon_MobileView_Tabs {
+  @apply hidden;
+}
+footer{
+  @apply w-full h-[90px] flex items-center px-12 py-4 bg-[#151244] text-[#fff] font-bold text-center;
+}
+/* Responsive code */
+
+@media (max-width: 1000px) and (min-width: 800px) {
+  .bannerMaintxt {
+    @apply text-2xl;
+  }
+  .herobannerBtn button {
+    @apply text-base;
+  }
+  /* site Navbar */
+  .siteNavbar_tabs li {
+    @apply text-base;
+  }
+  /* footer */
+  .webview {
+    @apply hidden;
+  }
+  .mobile-vieew_tabView {
+    @apply flex;
+  }
+}
+@media (max-width: 799px) and (min-width: 650px) {
+  .bannerMaintxt {
+    @apply text-xl;
+  }
+  .herobannerBtn button {
+    @apply text-sm px-4 py-2 mb-2;
+  }
+  /* site Navbar */
+  .siteNavbar_tabs li {
+    @apply text-base;
+  }
+  .navbar_site_box {
+    @apply px-4;
+  }
+  /* footer */
+  .mobile-vieew_tabView{
+    @apply flex flex-wrap items-center justify-between w-full;
+  }
+  .webview,
+  .siteNavbar_tabs {
+    @apply hidden;
+  }
+  .menuIcon_MobileView_Tabs {
+    @apply flex;
+  }
+  .rooterText {
+    @apply text-[16px];
+  }
+  .herobox {
+    @apply px-4 pt-2 h-[auto] items-end;
+  }
+  .hero_pic {
+    @apply flex flex-wrap justify-end;
+  }
+  .main-text_herrobanner {
+    @apply grid;
+  }
+}
+@media (max-width: 649px) and (min-width: 500px) {
+  .bannerMaintxt {
+    @apply text-xl;
+  }
+  .herobannerBtn button {
+    @apply text-sm px-4 py-2 mb-2;
+  }
+  /* site Navbar */
+  .siteNavbar_tabs li {
+    @apply text-base;
+  }
+  .navbar_site_box {
+    @apply px-4;
+  }
+  /* footer */
+  footer{
+    @apply px-3;
+  }
+  .mobile-vieew_tabView{
+    @apply flex flex-wrap items-center justify-between w-full;
+  }
+  .webview,
+  .siteNavbar_tabs {
+    @apply hidden;
+  }
+  .menuIcon_MobileView_Tabs {
+    @apply flex;
+  }
+  .rooterText {
+    @apply text-[16px];
+  }
+  .herobox {
+    @apply px-4 pt-2 h-[auto] items-end;
+  }
+  .hero_pic {
+    @apply flex flex-wrap justify-end;
+  }
+  .main-text_herrobanner {
+    @apply grid;
+  }
+}
+@media (max-width: 499px) and (min-width: 400px) {
+  .bannerMaintxt {
+    @apply text-[14px] leading-[20px];
+  }
+  .herobannerBtn button {
+    @apply text-sm px-4 py-2;
+  }
+  /* site Navbar */
+  .siteNavbar_tabs li {
+    @apply text-base;
+  }
+  .navbar_site_box {
+    @apply px-4 h-[auto];
+  }
+  /* footer */
+  .webview,
+  .siteNavbar_tabs {
+    @apply hidden;
+  }
+  footer{
+    @apply hidden;
+  }
+  .menuIcon_MobileView_Tabs {
+    @apply flex;
+  }
+  .rooterText {
+    @apply text-[16px];
+  }
+  .herobox {
+    @apply px-4 pt-2 h-[auto] items-end;
+  }
+  .hero_pic {
+    @apply flex flex-wrap justify-end;
+  }
+  .main-text_herrobanner {
+    @apply block;
+  }
+}
+@media (max-width: 399px) and (min-width: 300px) {
+  .bannerMaintxt {
+    @apply text-[14px] leading-[20px];
+  }
+  .herobannerBtn button {
+    @apply text-sm px-4 py-2;
+  }
+  /* site Navbar */
+  .siteNavbar_tabs li {
+    @apply text-base;
+  }
+  .navbar_site_box {
+    @apply px-4 h-[auto];
+  }
+  /* footer */
+  .webview,
+  .siteNavbar_tabs {
+    @apply hidden;
+  }
+  footer{
+    @apply hidden;
+  }
+  .menuIcon_MobileView_Tabs {
+    @apply flex;
+  }
+  .rooterText {
+    @apply text-[16px];
+  }
+  .herobox {
+    @apply px-4 pt-2 h-[auto] items-end;
+  }
+  .hero_pic {
+    @apply flex flex-wrap justify-end;
+  }
+  .main-text_herrobanner {
+    @apply block;
+  }
+  /* playerbox_player */
+  .playerbox_player{
+    @apply grid px-4 py-6;
+  }
+  .playerbox_player iframe{
+    @apply w-[220px] h-[120px];
+  }
 }

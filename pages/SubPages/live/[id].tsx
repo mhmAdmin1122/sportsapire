@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import Layout from '@/pages/Components/L/Layout';
 import React, { useEffect, useState } from 'react'
 import { mongooseConnection } from '@/lib/mongoose'
@@ -11,19 +12,20 @@ import Link from 'next/link'
 
 const PlayerBox = ({ channel }: any) => {
   const [channelCardData, setChannelCardData] = useState<string | Boolean | Number | null | never | object | any>([]);
-  const keyRotation: string = channelCardData?._id;
   useEffect(() => {
     axios.get('/api/channel').then(res => {
-      setChannelCardData(res.data)
+      const data: any = res.data;
+      setChannelCardData(data)
     })
   }, []);
+  
   return (
     <>
       <Head>
         <title>{channel?.channelName} Live</title>
       </Head>
       <Layout>
-        <div className='px-14 py-12 flex flex-wrap items-start justify-between'>
+        <div className='playerbox_player w-full px-14 py-12 flex flex-wrap items-start justify-between'>
           <div className='mainbox w-[64%]'>
             <iframe src={`${channel?.url}`} scrolling='no' allowFullScreen className='w-[800px] h-[500px] rounded-md overflow-hidden' />
             <div className='flex flex-wrap items-center justify-between pr-2'>
@@ -57,10 +59,10 @@ const PlayerBox = ({ channel }: any) => {
           </div>
           <div className="flex flex-wrap items-center justify-center gap-8 px-3 py-8 w-[36%]">
             <h1 className='w-[180px] h-[140px] flex text-center justify-center items-center bg-gradient-to-t from-indigo-500 via-purple-500 to-pink-500 rounded-md text-2xl font-bold cursor-context-menu text-[#fff]'>Watch Live More</h1>
-            {channelCardData.map((channelCardData: any) => (
-              <div key={keyRotation + 1} className='flex flex-wrap'>
+            {channelCardData?.map((channelCardData: any) => (
+              <div key={0} className='flex flex-wrap'>
                 <div className='w-[180px] h-[140px]'>
-                  <ImageBox SRC={channelCardData?.pic} ALT={channelCardData?.channelName} />
+                  <ImageBox SRC={channelCardData?.pic} ALT={channel?.channelName} />
                   <Link href={channelCardData?._id}>{channelCardData?.channelName}</Link>
                 </div>
               </div>
