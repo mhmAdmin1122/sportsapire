@@ -1,16 +1,16 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import Layout from '@/pages/Components/L/Layout';
-import React, { useEffect, useState } from 'react'
 import { mongooseConnection } from '@/lib/mongoose'
 import { Channel } from '@/models/channel'
 import ImageBox from '@/pages/Components/I/ImageBox';
 import Head from 'next/head';
 import { AiFillLike, AiFillDislike } from 'react-icons/ai'
 import { MdShare, MdBookmarkAdd } from 'react-icons/md'
+import { useEffect, useState } from 'react';
 import axios from 'axios';
-import Link from 'next/link'
+import Link from 'next/link';
 
-const PlayerBox = ({ channel }: any) => {
+const PlayerBox = ({ channels }: any) => {
   const [channelCardData, setChannelCardData] = useState<string | Boolean | Number | null | never | object | any>([]);
   useEffect(() => {
     axios.get('/api/channel').then(res => {
@@ -18,25 +18,24 @@ const PlayerBox = ({ channel }: any) => {
       setChannelCardData(data)
     })
   }, []);
-  
   return (
     <>
       <Head>
-        <title>{channel?.channelName} Live</title>
+        <title>{channels?.channelName} Live</title>
       </Head>
       <Layout>
         <div className='playerbox_player w-full px-14 py-12 flex flex-wrap items-start justify-between'>
           <div className='mainbox w-[64%]'>
-            <iframe src={`${channel?.url}`} scrolling='no' allowFullScreen className='w-[800px] h-[500px] rounded-md overflow-hidden' />
+            <iframe src={`${channels?.url}`} scrolling='no' allowFullScreen className='w-[100%] h-[500px] rounded-md overflow-hidden' />
             <div className='flex flex-wrap items-center justify-between pr-2'>
 
               <div className='flex flex-wrap items-center gap-2'>
-                <div className='w-[100px] h-[100px] m-4 shadow-md shadow-gray-400 overflow-hidden rounded-full border-dashed border-gray-300 border-2'>
-                  <ImageBox SRC={channel?.pic} />
+                <div className='channelframe_logo w-[100px] h-[100px] m-4 shadow-md shadow-gray-400 overflow-hidden rounded-full border-dashed border-gray-300 border-2'>
+                  <ImageBox SRC={channels?.pic} />
                 </div>
                 <div>
-                  <h1 className='cursor-pointer'>{channel?.channelName}</h1>
-                  <h3 className='cursor-context-menu font-bold text-gray-400'>{channel?.country}</h3>
+                  <h1 className='cursor-pointer'>{channels?.channelName}</h1>
+                  <h3 className='cursor-context-menu font-bold text-gray-400'>{channels?.country}</h3>
                 </div>
               </div>
 
@@ -57,12 +56,12 @@ const PlayerBox = ({ channel }: any) => {
 
             </div>
           </div>
-          <div className="flex flex-wrap items-center justify-center gap-8 px-3 py-8 w-[36%]">
+          <div className="morechannelsidPage flex flex-wrap items-center justify-center gap-8 px-3 py-8 w-[36%]">
             <h1 className='w-[180px] h-[140px] flex text-center justify-center items-center bg-gradient-to-t from-indigo-500 via-purple-500 to-pink-500 rounded-md text-2xl font-bold cursor-context-menu text-[#fff]'>Watch Live More</h1>
             {channelCardData?.map((channelCardData: any) => (
               <div key={0} className='flex flex-wrap'>
-                <div className='w-[180px] h-[140px]'>
-                  <ImageBox SRC={channelCardData?.pic} ALT={channel?.channelName} />
+                <div className='morechannelPic w-[180px] h-[140px]'>
+                  <ImageBox SRC={channelCardData?.pic} ALT={channels?.channelName} />
                   <Link href={channelCardData?._id}>{channelCardData?.channelName}</Link>
                 </div>
               </div>
@@ -79,10 +78,10 @@ export default PlayerBox;
 export async function getServerSideProps(context: any) {
   await mongooseConnection();
   const { id } = context.query
-  const channel = await Channel.findById(id)
+  const channels = await Channel.findById(id)
   return {
     props: {
-      channel: JSON.parse(JSON.stringify(channel))
+      channels: JSON.parse(JSON.stringify(channels))
     }
   }
 }

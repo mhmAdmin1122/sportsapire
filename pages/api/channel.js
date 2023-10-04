@@ -5,7 +5,7 @@ export default async function handle(req, res) {
   const { method } = req;
   await mongooseConnection();
   if(method === "GET"){
-    res.json(await Channel.find().limit(20))
+    res.json(await Channel.find())
   }
   if (method === "POST") {
     const { channelName, channelDesc, pic, country, url } = req.body;

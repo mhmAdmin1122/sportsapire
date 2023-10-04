@@ -252,10 +252,28 @@ footer{
     @apply block;
   }
   /* playerbox_player */
+  .mainbox{
+    @apply w-full;
+  }
   .playerbox_player{
     @apply grid px-4 py-6;
   }
   .playerbox_player iframe{
-    @apply w-[220px] h-[120px];
+    @apply w-[100%] h-[220px];
+  }
+  .livechannel-app{
+    @apply px-1;
+  }
+  .channelframe_logo{
+    @apply w-[50px] h-[50px] m-1;
+  }
+  .functionalIcon{
+    @apply text-xl;
+  }
+  .morechannelsidPage{
+    @apply w-[100%] h-auto;
+  }
+  .morechannelPic{
+    @apply w-[100px] h-[70px]
   }
 }
