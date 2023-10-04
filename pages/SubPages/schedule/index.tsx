@@ -52,14 +52,14 @@ const Schedule = () => {
 
                     <h1 className='text-4xl font-bold text-center cursor-context-menu'>Sport Schedule</h1>
 
-                    <ul className='flex flex-wrap items-center gap-5 bg-[#ff59bf] px-10 w-fit font-bold text-[#fff] rounded-md'>
+                    <ul className='schedualmenuList flex flex-wrap items-center gap-5 bg-[#ff59bf] px-10 w-fit font-bold text-[#fff] rounded-md'>
                         <li className='cursor-pointer hover:bg-[#ec92cab7] px-3 py-4' onClick={handleCricket}>Cricket</li>
                         <li className='cursor-pointer hover:bg-[#ec92cab7] px-3 py-4' onClick={handleFootBall}>FootBall</li>
                         <li className='cursor-pointer hover:bg-[#ec92cab7] px-3 py-4' onClick={handleTennis}>Tennis</li>
                         <li className='cursor-pointer hover:bg-[#ec92cab7] px-3 py-4' onClick={handleWWE}>WWE</li>
                     </ul>
 
-                    {cricket && <div className='flex flex-wrap justify-center gap-4 w-[600px]'>
+                    {cricket && <div className='schedBoxLinking flex flex-wrap justify-center gap-4 w-[600px]'>
                         <div className="w-[280px] h-[180px] text-center px-12 py-12 font-bold text-2xl rounded-lg bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-[#fff] border-2 border-gray-200 flex flex-wrap items-center justify-center shadow-md shadow-gray-300">
                             <Link href={"/SubPages/schedule"}><h1>2023 Schedule</h1></Link>
                         </div>
@@ -74,7 +74,7 @@ const Schedule = () => {
                         </div>
                     </div>}
 
-                    {football && <div className='flex flex-wrap justify-center gap-4 w-[600px]'>
+                    {football && <div className='schedBoxLinking flex flex-wrap justify-center gap-4 w-[600px]'>
                         <div className="w-[280px] h-[180px] text-center px-12 py-12 font-bold text-2xl rounded-lg bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-[#fff] border-2 border-gray-200 flex flex-wrap items-center justify-center shadow-md shadow-gray-300">
                             <Link href={"/SubPages/schedule"}><h1>2023 Schedule</h1></Link>
                         </div>
@@ -89,7 +89,7 @@ const Schedule = () => {
                         </div>
                     </div>}
 
-                    {tennis && <div className='flex flex-wrap justify-center gap-4 w-[600px]'>
+                    {tennis && <div className='schedBoxLinking flex flex-wrap justify-center gap-4 w-[600px]'>
                         <div className="w-[280px] h-[180px] text-center px-12 py-12 font-bold text-2xl rounded-lg bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-[#fff] border-2 border-gray-200 flex flex-wrap items-center justify-center shadow-md shadow-gray-300">
                             <Link href={"/SubPages/schedule"}><h1>2023 Schedule</h1></Link>
                         </div>
@@ -104,7 +104,7 @@ const Schedule = () => {
                         </div>
                     </div>}
 
-                    {wwe && <div className='flex flex-wrap justify-center gap-4 w-[600px]'>
+                    {wwe && <div className='schedBoxLinking flex flex-wrap justify-center gap-4 w-[600px]'>
                         <div className="w-[280px] h-[180px] text-center px-12 py-12 font-bold text-2xl rounded-lg bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-[#fff] border-2 border-gray-200 flex flex-wrap items-center justify-center shadow-md shadow-gray-300">
                             <Link href={"/SubPages/schedule"}><h1>2023 Schedule</h1></Link>
                         </div>

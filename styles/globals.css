@@ -280,7 +280,13 @@ footer{
     @apply w-[100px] h-[70px]
   }
   .mobileMenuList{
-    @apply grid list-none gap-2 absolute z-60 bg-blue-900 top-[60px] right-[6px] px-[30px] py-[20px] rounded-[12px] text-2xl font-bold shadow-md shadow-gray-400 border-[1px] border-blue-800 transition duration-1000;
+    @apply grid list-none gap-2 absolute z-50 bg-blue-900 top-[60px] right-[6px] px-[30px] py-[20px] rounded-[12px] text-lg font-bold shadow-md shadow-gray-400 border-[1px] border-blue-800 transition duration-1000;
+  }
+  .schedualmenuList, .schedualmenuList li{
+    @apply text-sm px-[0px] py-2 gap-[8px] justify-center;
+  }
+  .schedBoxLinking, .schedualmenuList, .form_card {
+    @apply !w-[100%];
   }
 }
    
