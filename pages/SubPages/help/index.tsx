@@ -121,13 +121,13 @@ const Help = () => {
                         <div className='absolute right-0'>
                             <button className='text-[#fff] bg-red-600 px-4 py-2 rounded-md text-xl font-bold flex items-center justify-center' onClick={closeBtnHandle}>X</button>
                         </div>
-                        <form className='grid justify-center gap-3 items-center bg-[#000000] px-8 py-4 rounded-lg w-fit'>
+                        <div className='block h-fit items-center bg-[#000000] px-8 py-4 rounded-lg w-fit'>
 
-                            <h1 className='text-2xl font-bold text-center w-full text-[#fff]'>Map Direction</h1>
+                            <h1 className='text-2xl font-bold text-center w-full text-[#fff] my-2'>Map Direction</h1>
 
-                            <b className='text-[#fff]'>coming soon....</b>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3471.989435208583!2d71.63384697451535!3d29.51666714338558!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x393b9ee4e335c893%3A0xdfa510203a0c4dfb!2sGJ8P%2BMH7%2C%20Lodhr%C4%81n%2C%20Lodhran%2C%20Punjab%2C%20Pakistan!5e0!3m2!1sen!2sus!4v1696446165777!5m2!1sen!2sus" width={220} height={180} loading="lazy" className='rounded-md overflow-hidden mb-3' />
 
-                        </form>
+                        </div>
                     </div>}
 
                     {feedback && <div className="absolute grid justify-center z-20 bg-[#1f1e1ed5] px-20 py-9 w-full h-screen">
