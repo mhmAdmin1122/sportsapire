@@ -81,6 +81,7 @@ footer{
 }
 /* Responsive code */
 
+/* Desktop and Pc, Laptop, size CSS */
 @media (max-width: 1000px) and (min-width: 800px) {
   .bannerMaintxt {
     @apply text-2xl;
@@ -98,6 +99,9 @@ footer{
   }
   .mobile-vieew_tabView {
     @apply flex;
+  }
+  .playerbox_player iframe{
+    @apply h-[290px];
   }
 }
 @media (max-width: 799px) and (min-width: 650px) {
@@ -137,7 +141,44 @@ footer{
   .main-text_herrobanner {
     @apply grid;
   }
+  /* playerbox_player */
+  .mainbox{
+    @apply w-full;
+  }
+  .playerbox_player{
+    @apply grid px-4 py-6;
+  }
+  .playerbox_player iframe{
+    @apply w-[100%] h-[490px];
+  }
+  .livechannel-app{
+    @apply px-1;
+  }
+  .channelframe_logo{
+    @apply w-[50px] h-[50px] m-1;
+  }
+  .functionalIcon{
+    @apply text-xl;
+  }
+  .morechannelsidPage{
+    @apply w-[100%] h-auto;
+  } 
+  .morechannelPic{
+    @apply w-[100px] h-[70px]
+  }
+  .mobileMenuList{
+    @apply grid list-none gap-2 absolute z-50 bg-blue-900 top-[60px] right-[6px] px-[30px] py-[20px] rounded-[12px] text-lg font-bold shadow-md shadow-gray-400 border-[1px] border-blue-800 transition duration-1000;
+  }
+  .schedualmenuList, .schedualmenuList li{
+    @apply text-sm px-[0px] py-2 gap-[8px] justify-center;
+  }
+  .schedBoxLinking, .schedualmenuList, .form_card {
+    @apply !w-[100%];
+  }
+  /* admin-pannelview */
 }
+
+/* Tab, iPad, HubTab, Size CSS */
 @media (max-width: 649px) and (min-width: 500px) {
   .bannerMaintxt {
     @apply text-xl;
@@ -178,46 +219,45 @@ footer{
   .main-text_herrobanner {
     @apply grid;
   }
+  /* playerbox_player */
+  .mainbox{
+    @apply w-full;
+  }
+  .playerbox_player{
+    @apply grid px-4 py-6;
+  }
+  .playerbox_player iframe{
+    @apply w-[100%] h-[320px];
+  }
+  .livechannel-app{
+    @apply px-1;
+  }
+  .channelframe_logo{
+    @apply w-[50px] h-[50px] m-1;
+  }
+  .functionalIcon{
+    @apply text-xl;
+  }
+  .morechannelsidPage{
+    @apply w-[100%] h-auto;
+  } 
+  .morechannelPic{
+    @apply w-[100px] h-[70px]
+  }
+  .mobileMenuList{
+    @apply grid list-none gap-2 absolute z-50 bg-blue-900 top-[60px] right-[6px] px-[30px] py-[20px] rounded-[12px] text-lg font-bold shadow-md shadow-gray-400 border-[1px] border-blue-800 transition duration-1000;
+  }
+  .schedualmenuList, .schedualmenuList li{
+    @apply text-sm px-[0px] py-2 gap-[8px] justify-center;
+  }
+  .schedBoxLinking, .schedualmenuList, .form_card {
+    @apply !w-[100%];
+  }
+  /* admin-pannelview */
 }
+
+/* Mobile view CSS */
 @media (max-width: 499px) and (min-width: 400px) {
-  .bannerMaintxt {
-    @apply text-[14px] leading-[20px];
-  }
-  .herobannerBtn button {
-    @apply text-sm px-4 py-2;
-  }
-  /* site Navbar */
-  .siteNavbar_tabs li {
-    @apply text-base;
-  }
-  .navbar_site_box {
-    @apply px-4 h-[auto];
-  }
-  /* footer */
-  .webview,
-  .siteNavbar_tabs {
-    @apply hidden;
-  }
-  footer{
-    @apply hidden;
-  }
-  .menuIcon_MobileView_Tabs {
-    @apply flex;
-  }
-  .rooterText {
-    @apply text-[16px];
-  }
-  .herobox {
-    @apply px-4 pt-2 h-[auto] items-end;
-  }
-  .hero_pic {
-    @apply flex flex-wrap justify-end;
-  }
-  .main-text_herrobanner {
-    @apply block;
-  }
-}
-@media (max-width: 399px) and (min-width: 300px) {
   .bannerMaintxt {
     @apply text-[14px] leading-[20px];
   }
@@ -288,5 +328,80 @@ footer{
   .schedBoxLinking, .schedualmenuList, .form_card {
     @apply !w-[100%];
   }
+  /* admin-pannelview */
+}
+@media (max-width: 399px) and (min-width: 300px) {
+  /* web-view */
+  .bannerMaintxt {
+    @apply text-[14px] leading-[20px];
+  }
+  .herobannerBtn button {
+    @apply text-sm px-4 py-2;
+  }
+  /* site Navbar */
+  .siteNavbar_tabs li {
+    @apply text-base;
+  }
+  .navbar_site_box {
+    @apply px-4 h-[auto];
+  }
+  /* footer */
+  .webview,
+  .siteNavbar_tabs {
+    @apply hidden;
+  }
+  footer{
+    @apply hidden;
+  }
+  .menuIcon_MobileView_Tabs {
+    @apply flex;
+  }
+  .rooterText {
+    @apply text-[16px];
+  }
+  .herobox {
+    @apply px-4 pt-2 h-[auto] items-end;
+  }
+  .hero_pic {
+    @apply flex flex-wrap justify-end;
+  }
+  .main-text_herrobanner {
+    @apply block;
+  }
+  /* playerbox_player */
+  .mainbox{
+    @apply w-full;
+  }
+  .playerbox_player{
+    @apply grid px-4 py-6;
+  }
+  .playerbox_player iframe{
+    @apply w-[100%] h-[220px];
+  }
+  .livechannel-app{
+    @apply px-1;
+  }
+  .channelframe_logo{
+    @apply w-[50px] h-[50px] m-1;
+  }
+  .functionalIcon{
+    @apply text-xl;
+  }
+  .morechannelsidPage{
+    @apply w-[100%] h-auto;
+  } 
+  .morechannelPic{
+    @apply w-[100px] h-[70px]
+  }
+  .mobileMenuList{
+    @apply grid list-none gap-2 absolute z-50 bg-blue-900 top-[60px] right-[6px] px-[30px] py-[20px] rounded-[12px] text-lg font-bold shadow-md shadow-gray-400 border-[1px] border-blue-800 transition duration-1000;
+  }
+  .schedualmenuList, .schedualmenuList li{
+    @apply text-sm px-[0px] py-2 gap-[8px] justify-center;
+  }
+  .schedBoxLinking, .schedualmenuList, .form_card {
+    @apply !w-[100%];
+  }
+  /* admin-pannelview */
 }
    

@@ -1,4 +1,7 @@
+import ContactUs from '@/pages/Components/C/ContactUs'
+import FeedBack from '@/pages/Components/F/FeedBack'
 import Layout from '@/pages/Components/L/Layout'
+import Problems from '@/pages/Components/P/Problems'
 import Head from 'next/head'
 import React, { useState } from 'react'
 
@@ -46,7 +49,8 @@ const Help = () => {
     return (
         <>
             <Head>
-                <title>Help</title>
+                <title>Help || Sport Sapire</title>
+                <meta name="description" content="Get Help From Sportsapire.com" />
             </Head>
             <Layout>
                 <div className="relative px-14 py-12 grid justify-items-start justify-center w-full gap-8">
@@ -77,44 +81,14 @@ const Help = () => {
                         <div className='absolute right-0'>
                             <button className='text-[#fff] bg-red-600 px-4 py-2 rounded-md text-xl font-bold flex items-center justify-center' onClick={closeBtnHandle}>X</button>
                         </div>
-                        <form className='grid justify-center gap-3 items-center bg-[#000000] px-8 py-4 rounded-lg w-fit'>
-
-                            <h1 className='text-2xl font-bold text-center w-full text-[#fff]'>Contact Us</h1>
-
-                            <label htmlFor="">Full Name: </label>
-                            <input type="text" placeholder='Jhon Doe' />
-
-                            <label htmlFor="">Email: </label>
-                            <input type="email" placeholder='example@xyz.com' />
-
-                            <label htmlFor="">Mobile: </label>
-                            <input type="tel" placeholder='+1-000-0000-00' />
-
-                            <label htmlFor="">Message: </label>
-                            <textarea rows={5} cols={5} placeholder='Message' />
-
-                            <div className='flex flex-wrap justify-center'>
-                                <button type='submit' className='bg-green-500 text-lg font-semibold text-[#ececec]'>Submit</button>
-                            </div>
-
-                        </form>
+                        <ContactUs />
                     </div>}
-                    
+
                     {problems && <div className="absolute grid justify-center z-20 bg-[#1f1e1ed5] px-20 py-9 w-full h-screen">
                         <div className='absolute right-0'>
                             <button className='text-[#fff] bg-red-600 px-4 py-2 rounded-md text-xl font-bold flex items-center justify-center' onClick={closeBtnHandle}>X</button>
                         </div>
-                        <form className='grid justify-center gap-3 items-center bg-[#000000] px-8 py-4 rounded-lg w-fit'>
-                            <h1 className='text-2xl font-bold text-center w-full text-[#fff]'>Describe Your Problems</h1>
-                            <label htmlFor="">Email: </label>
-                            <input type="email" placeholder='example@xyz.com' />
-                            <label htmlFor="">Message: </label>
-                            <textarea rows={5} cols={5} placeholder='Message' />
-                            <div className='flex flex-wrap justify-center'>
-                                <button type='submit' className='bg-green-500 text-lg font-semibold text-[#ececec]'>Submit</button>
-                            </div>
-
-                        </form>
+                        <Problems />
                     </div>}
 
                     {mapDirection && <div className="absolute grid justify-center z-20 bg-[#1f1e1ed5] px-20 py-9 w-full h-screen">
@@ -134,19 +108,7 @@ const Help = () => {
                         <div className='absolute right-0'>
                             <button className='text-[#fff] bg-red-600 px-4 py-2 rounded-md text-xl font-bold flex items-center justify-center' onClick={closeBtnHandle}>X</button>
                         </div>
-                        <form className='grid justify-center gap-3 items-center bg-[#000000] px-8 py-4 rounded-lg w-fit'>
-
-                            <h1 className='text-2xl font-bold text-center w-full text-[#fff]'>Feedback</h1>
-
-
-                            <label htmlFor="">Feedback: </label>
-                            <textarea rows={5} cols={5} placeholder='Message' />
-
-                            <div className='flex flex-wrap justify-center'>
-                                <button type='submit' className='bg-green-500 text-lg font-semibold text-[#ececec]'>Submit</button>
-                            </div>
-
-                        </form>
+                        <FeedBack />
                     </div>}
 
                 </div>

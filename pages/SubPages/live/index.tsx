@@ -17,6 +17,7 @@ const Live = () => {
             <Head>
                 <title>Live Channels</title>
                 <meta name="description" content="View Live Cricket Online, Free, HD, at sportsppaire.com" />
+                <meta name="keywords" content="World cup 2023 Live Free, PTV Sports, ASport, Sky Sport, Super Sport, Willow Hd, etc.." />
             </Head>
             <Layout>
                 <div className='px-12 py-12 livechannel-app'>
