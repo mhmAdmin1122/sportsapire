@@ -273,6 +273,7 @@ footer{
   .morechannelsidPage{
     @apply w-[100%] h-auto;
   }
+  
   .morechannelPic{
     @apply w-[100px] h-[70px]
   }
