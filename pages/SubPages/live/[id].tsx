@@ -45,7 +45,6 @@ const PlayerBox = ({ channels }: any) => {
               src={`${channels?.url}`}
               scrolling='no'
               allowFullScreen
-              allow='autoplay'
               className='w-[100%] h-[500px] rounded-md overflow-hidden' />
             <div className='flex flex-wrap items-center justify-between pr-2'>
 
