@@ -18,6 +18,13 @@ const PlayerBox = ({ channels }: any) => {
       setChannelCardData(data)
     })
   }, []);
+
+  const [muted, setMuted] = useState(true);
+
+  const toggleMute = () => {
+    setMuted(!muted);
+  };
+
   return (
     <>
       <Head>
@@ -26,7 +33,20 @@ const PlayerBox = ({ channels }: any) => {
       <Layout>
         <div className='playerbox_player w-full px-14 py-12 flex flex-wrap items-start justify-between'>
           <div className='mainbox w-[64%]'>
-            <iframe src={`${channels?.url}`} scrolling='no' allowFullScreen className='w-[100%] h-[500px] rounded-md overflow-hidden' />
+            <div className='bg-blue-600 text-white px-4 py-3 text-center w-fit rounded-md'>
+              <h1 className='bg-gray-900 rounded-md px-4 py-2'>For enjoying without ads install adblocker{"( Adgaurd Adblocker )"} free</h1>
+              <br />
+              <Link href="https://chrome.google.com/webstore/detail/adguard-adblocker/bgnkhhnnamicmpeenaelnjfhikgbkllg" target='blank' className='bg-green-900 px-4 py-2 rounded-md'>Download for Deaktop, Tab, and Laptops</Link>
+              <br />
+              <br />
+              <Link href="https://adguard.com/en/adguard-android/overview.html" target='blank' className='bg-red-900 px-4 py-2 rounded-md'>Download for Mobile</Link>
+            </div>
+            <iframe
+              src={`${channels?.url}`}
+              scrolling='no'
+              allowFullScreen
+              allow='autoplay'
+              className='w-[100%] h-[500px] rounded-md overflow-hidden' />
             <div className='flex flex-wrap items-center justify-between pr-2'>
 
               <div className='flex flex-wrap items-center gap-2'>
