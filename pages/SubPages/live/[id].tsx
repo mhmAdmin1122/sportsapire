@@ -9,6 +9,8 @@ import { MdShare, MdBookmarkAdd } from 'react-icons/md'
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import Link from 'next/link';
+import CommentWriter from '@/pages/Components/C/CommentWriter';
+import CommentViewer from '@/pages/Components/C/CommentViewer';
 
 const PlayerBox = ({ channels }: any) => {
   const [channelCardData, setChannelCardData] = useState<string | Boolean | Number | null | never | object | any>([]);
@@ -32,6 +34,7 @@ const PlayerBox = ({ channels }: any) => {
       </Head>
       <Layout>
         <div className='playerbox_player w-full px-14 py-12 flex flex-wrap items-start justify-between'>
+
           <div className='mainbox w-[64%]'>
             <div className='bg-blue-600 text-white px-4 py-3 text-center w-fit rounded-md'>
               <h1 className='bg-gray-900 rounded-md px-4 py-2'>For enjoying without ads install adblocker{"( Adgaurd Adblocker )"} free</h1>
@@ -41,11 +44,13 @@ const PlayerBox = ({ channels }: any) => {
               <br />
               <Link href="https://adguard.com/en/adguard-android/overview.html" target='blank' className='bg-red-900 px-4 py-2 rounded-md'>Download for Mobile</Link>
             </div>
-            <iframe
-              src={`${channels?.url}`}
+
+            <iframe src={`${channels?.url}`}
               scrolling='no'
               allowFullScreen
-              className='w-[100%] h-[500px] rounded-md overflow-hidden' />
+              className='w-[100%] h-[500px] rounded-md overflow-hidden'
+            />
+
             <div className='flex flex-wrap items-center justify-between pr-2'>
 
               <div className='flex flex-wrap items-center gap-2'>
@@ -74,7 +79,18 @@ const PlayerBox = ({ channels }: any) => {
               </div>
 
             </div>
+
+            <div className="commentBox mt-2">
+              <h1 className='text-lg font-bold cursor-context-menu'>Comment</h1>
+              <div className="writeCommenBox flex justify-center w-[100%] items-center">
+                <CommentWriter />
+              </div>
+              <div className="comments">
+                <CommentViewer />
+              </div>
+            </div>
           </div>
+
           <div className="morechannelsidPage flex flex-wrap items-center justify-center gap-8 px-3 py-8 w-[36%]">
             <h1 className='w-[180px] h-[140px] flex text-center justify-center items-center bg-gradient-to-t from-indigo-500 via-purple-500 to-pink-500 rounded-md text-2xl font-bold cursor-context-menu text-[#fff]'>Watch Live More</h1>
             {channelCardData?.map((channelCardData: any) => (
@@ -86,6 +102,8 @@ const PlayerBox = ({ channels }: any) => {
               </div>
             ))}
           </div>
+
+
         </div>
       </Layout>
     </>
